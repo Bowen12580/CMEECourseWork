@@ -12,10 +12,10 @@ then
   exit 1
 fi
 
-output_file="space_$1"
+output_file="${1%.*}.txt"
+
 
 # Convert comma separated values to space separated values and write to output file
-sed 's/,/ /g' "$1" > "$output_file" || { echo "Error: Failed to write to output file."; exit 1; }
-
+sed 's/,/ /g' "$1" > "$output_file" 
 echo "CSV file '$1' converted to space separated values and saved as '$output_file'."
-exit 0
+
