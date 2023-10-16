@@ -1,0 +1,39 @@
+# make sure now we are in the directory 'data'! ../data is a directory there is an error for   the #5.But others' output is OK.
+
+# Question: Is the above show the path properly(by declaring in the directory 'data')? or use #../data as a comment to be the path?
+
+#1  
+   #it is suitable to use the command 'wc -l your_file.fasta' there is an example below for the first fasta file
+  
+	wc -l ../data 407228326.fasta
+   
+  
+#2
+   # first method (this is the real answer)
+	tail -n +2 ../data E.coli.fasta
+   # second method (each line has 'E.coli.fasta', the answer is different.
+	grep -v '>' ../data E.coli.fasta
+
+#3 
+   # same as the above problem. So 'tail' command is better
+   # first method
+	grep -v '>' ../data E.coli.fasta | tr -d '\n' | wc -c
+   # second method (better)	
+	tail -n +2 ../data E.coli.fasta | tr -d '\n' | wc -c
+  
+#4 
+   # first method	
+ 	grep -v '>' ../data E.coli.fasta | tr -d '\n' | grep -o 'ATGC' | wc -l
+   # second method (better)	
+ 	tail -n +2 ../data E.coli.fasta | tr -d '\n' | grep -o 'ATGC' | wc -l
+ 	
+#5
+	tail -n +2 E.coli.fasta | tr -d '\n' | grep -o '[ATGC]' > Sequence.txt
+	A=$(grep -o 'A' Sequence.txt | wc -l)
+	T=$(grep -o 'T' Sequence.txt | wc -l)
+	G=$(grep -o 'G' Sequence.txt | wc -l)
+	C=$(grep -o 'C' Sequence.txt | wc -l)
+	echo "scale=4; ($A+$T)/($C+$G)" | bc
+	
+   #Conclusion (as a note) : echo must use " " rather than ' ' .
+                            #grep -v will output the file name , but 'tail' will not.
