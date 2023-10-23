@@ -1,0 +1,3 @@
+# Two example sequences to match
+ATCGCCGGATTACGGG
+CAATTCGGAT
