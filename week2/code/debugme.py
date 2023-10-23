@@ -7,35 +7,34 @@ def buggyfunc(x):
 
 buggyfunc(20)
 
-# %pdb is the switch of debugging
+#%run debugme.py
+#%pdb
+#run debugme.py
 
-import ipdb; ipdb.set_trace()
+'''
+ipdb> p x                                                                                                                     
+20
 
-def buggyfunc(x):
-    y = x
-    for i in range(x):
-        try: 
-            y = y-1
-            z = x/y
-        except:
-            print(f"This didn't work;{x = }; {y = }")
-    return z
+ipdb> p y                                                                                                                     
+0
 
-buggyfunc(20)
+ipdb> p z                                                                                                                     
+20.0
 
-def buggyfunc(x):
-    y = x
-    for i in range(x):
-        try: 
-            y = y-1
-            z = x/y
-        except ZeroDivisionError:
-            print(f"The result of dividing a number by zero is undefined")
-        except:
-            print(f"This didn't work;{x = }; {y = }")
-        else:
-            print(f"OK; {x = }; {y = }, {z = };")
-    return z
+ipdb> p x/y                                                                                                                   
+*** ZeroDivisionError: division by zero
 
-buggyfunc(20)
+ipdb> l                                                                                                                       
+      1 def buggyfunc(x):
+      2     y = x
+      3     for i in range(x):
+      4         y = y-1
+----> 5         z = x/y
+      6     return z
+      7 
+      8 buggyfunc(20)
+ipdb> q
 
+In []: %pdb
+Automatic pdb calling has been turned OFF
+'''
