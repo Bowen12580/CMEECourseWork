@@ -64,11 +64,11 @@ for i in range(l1): # Note that you just take the last alignment with the highes
     if z > my_best_score:
         my_best_align = "." * i + s2 # think about what this is doing!
         my_best_score = z 
-'''        
+      
 print(my_best_align)
 print(s1)
 print("Best score:", my_best_score)
-'''
+
 
 g = open('../data/DNA_Sequence_Output.txt', 'w')
 g.write(my_best_align)
