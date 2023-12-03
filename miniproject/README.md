@@ -11,6 +11,10 @@ Script to find the most suitable mathematical model for fitting empirical datase
   - `model_plot.R`: Uses minpack.lm and ggplot2 packages for fitting and plotting, generating images with fitted lines for Logistic, Linear Regression (degree one), Polynomial Regression (degree two), and Polynomial Regression (degree three).
   - `output.tex`: Contains LaTeX code for the report.
   - `reference.bib`: Contains bibliographic references for the LaTeX report.
+  - `run_MiniProject.sh`: run the whole project but not the LaTeX compiling
+
+
+
 
 - **Data:** Contains the data needed for code execution.
 
@@ -20,6 +24,7 @@ Script to find the most suitable mathematical model for fitting empirical datase
 
 # Run the Entire Project
 chmod +x run_MiniProject.sh
+
 ./run_MiniProject.sh
 
 
