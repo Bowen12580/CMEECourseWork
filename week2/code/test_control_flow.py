@@ -2,7 +2,7 @@
 
 """Some functions exemplifying the use of control statements"""
 
-__author__ = 'Your Name (Your.Name@your.email.address)'
+__author__ = 'Bowen Duan (bd623@imperial.ac.uk)'
 __version__ = '0.0.1'
 
 import sys
@@ -35,10 +35,4 @@ def main(argv):
 if (__name__ == "__main__"):
     status = main(sys.argv)
 
-# this line can be comment by typing in the terminal
-# python3 -m doctest -v your_function_to_test.py
 doctest.testmod()   # To run with embedded tests
-
-#python3 -m doctest -v test_control_flow.py  this line
-
-#run test_control_flow.py -v

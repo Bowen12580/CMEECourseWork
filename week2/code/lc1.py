@@ -1,4 +1,4 @@
-# Make sure we are in the 'wee2/code' directory 
+# Make sure we are in the 'week2/code' directory 
 birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
           ('Delichon urbica','House martin',19),
           ('Junco phaeonotus','Yellow-eyed junco',19.5),
@@ -24,17 +24,17 @@ Two methods to make a list comprehension
 
 # This is the solution for the first question
 Latin_Names = [ name[0] for name in birds]
-print(f'Common_Name: {Latin_Names} ')
+print(f'Latin_Names: {Latin_Names} ')
 
 
 # This is the solution for the second question
 Common_Names = [ name[1] for name in birds]
-print(f'Common_Name: {Common_Names} ')
+print(f'Common_Names: {Common_Names} ')
 
 
 #This is the solution for the third question
 Mean_Body_Masses = [ name[2] for name in birds]
-print(f'Common_Name: {Mean_Body_Masses} ')
+print(f'Mean_Body_Masses: {Mean_Body_Masses} ')
 
 
 
@@ -50,7 +50,7 @@ print('Latin_Names: %s' %Latin_Names)
 Common_Names = []
 for k in range(0,5):
     Common_Names.append(birds[k][1])
-print(f'Common_Name: {Common_Names} ')
+print(f'Common_Names: {Common_Names} ')
 
 
 Mean_Body_Masses = []

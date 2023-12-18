@@ -6,7 +6,21 @@ import sys
 #Define function
 def is_an_oak(name):
     """ Returns True if name is starts with 'quercus' """
-    if name.lower().startswith('quercus') and len(name)==7 :
+    """ 
+    Returns True if name starts with 'quercus'.
+    
+    >>> is_an_oak('Fraxinus excelsior')
+    False
+    >>> is_an_oak('Quercuss')
+    True
+    >>> is_an_oak('Quercusssss')
+    True
+    >>> is_an_oak('Quercas')
+    False
+    >>> is_an_oak('Uuercus')
+    False
+    """
+    if name.lower().startswith('quercus'):
         return True
     else:
         return False
@@ -15,7 +29,7 @@ def is_an_oak(name):
 
 def main(argv): 
     f = open('../data/TestOaksData.csv','r')
-    g = open('../data/JustOaksData.csv','w')
+    g = open('../results/JustOaksData.csv','w')
     taxa = csv.reader(f)
     csvwrite = csv.writer(g)
     oaks = set()

@@ -70,7 +70,7 @@ print(s1)
 print("Best score:", my_best_score)
 
 
-g = open('../data/DNA_Sequence_Output.txt', 'w')
+g = open('../results/DNA_Sequence_Output.txt', 'w')
 g.write(my_best_align)
 g.write("\n")
 g.write(s1)
