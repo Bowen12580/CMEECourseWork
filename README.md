@@ -28,7 +28,7 @@ bd623@imperial.ac.uk
 
 1. **align_seqs_better.py** in week2/code
 2. **align_seqs_fasta.py** in week2/code
-3. **oaks_debugme.py** in week2/code
+3. **oaks_debugme_group.py** in week2/code
 4. **get_TreeHeight.R** in week3/code
 5. **get_TreeHeight.py** in week3/code
 6. **run_get_TreeHeight.sh** in week3/code
@@ -48,7 +48,7 @@ bd623@imperial.ac.uk
 
     This code performs sequence alignment between two DNA sequences loaded from FASTA files, identifying the best matching alignment and saving it along with its score in the **results** directory.
 
-3. oaks_debugme.py
+3. oaks_debugme_group.py
 
     This code processes a CSV file containing biological data, specifically focusing on identifying and extracting rows related to oak species, and then writes this filtered data to a new CSV file and save in the **results** directory.
 
