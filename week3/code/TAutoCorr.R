@@ -24,12 +24,12 @@ for(i in 1:n_permutations){
 p_value <- sum(permuted_corrs > original_corr) / n_permutations
 
 # Draw raw temperature data graph
-png("../results/02_time.png")
+png("../data/02_time.png")
 plot(ats$Year, ats$Temp, type='l', main="Key West Annual Mean Temperature", xlab="Year", ylab=expression("Temperature ("*degree*C*")"))
 dev.off()
 
 # Draw a correlation coefficient distribution map after permutation
-png("../results/02_corr.png")
+png("../data/02_corr.png")
 hist(permuted_corrs, breaks=50, main="Distribution of Correlation Coefficients from Permutations", xlab="Correlation Coefficient")
 abline(v=original_corr, col="red")
 dev.off()
