@@ -1,3 +1,5 @@
+#!/bin/sh
+
 MSG1="Hello"
 MSG2=$USER
 echo "$MSG1 $MSG2"
